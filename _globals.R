@@ -1,5 +1,5 @@
 args <- commandArgs(trailingOnly=TRUE)
-defaultPadVersion <- "19a"
+defaultPadVersion <- "19b"
 if(length(args) == 0) {
   print(paste("No PAD version specified. Using default", defaultPadVersion))
   padVersion <- defaultPadVersion
