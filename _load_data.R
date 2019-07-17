@@ -9,8 +9,7 @@ padRaw <- read_csv(paste0(dataDir, "/bobaadr.txt"),
 bbl <- read_csv(paste0(dataDir, "/bobabbl.txt")) %>%
   select(boro, block, lot, billboro, billblock, billlot, lolot, hilot, condoflag, condonum, coopnum, vacant)
 
-bblRaw <- read_csv(paste0(dataDir, "/bobabbl.txt")) %>%
-  select(boro, block, lot, billboro, billblock, billlot, lolot, hilot, condoflag, condonum, coopnum, vacant)
+bblRaw <- bbl
 
 # Read Street Names Database to join in alternates
 snd <- read_fwf(

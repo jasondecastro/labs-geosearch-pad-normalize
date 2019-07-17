@@ -11,7 +11,6 @@ bincentroids <- bincentroids %>%
   mutate(lat = as.double(lat, options(digits=7))) %>%
   mutate(lng = as.double(lng, options(digits=7)))
 
-
 # Left join BBL bill data; unite boro, block, lots, for a concatenated join keys
 pad <- padRaw %>%
   left_join(bbl, by = c('boro', 'block', 'lot')) %>%
@@ -88,12 +87,3 @@ pad <- pad %>%
 # trim street name field, remove multiple spaces
 pad <- pad %>% 
   mutate(stname = str_trim(gsub("\\s+", " ", stname)))
-
-pad <- bblRaw %>% 
-  mutate(lolot = select(bbl, c("lolot")))
-  mutate(lolot = lolot)
-  mutate(hilot = lolot)
-  mutate(condoflag = condoflag)
-  mutate(condonum = condonum)
-  mutate(coopnum = coopnum)
-  mutate(vacant = vacant)
