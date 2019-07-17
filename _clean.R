@@ -88,3 +88,11 @@ pad <- pad %>%
 # trim street name field, remove multiple spaces
 pad <- pad %>% 
   mutate(stname = str_trim(gsub("\\s+", " ", stname)))
+
+pad <- pad %>% 
+  mutate(lolot = lolot)
+  mutate(hilot = lolot)
+  mutate(condoflag = condoflag)
+  mutate(condonum = condonum)
+  mutate(coopnum = coopnum)
+  mutate(vacant = vacant)
