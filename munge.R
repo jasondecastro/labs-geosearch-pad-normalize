@@ -32,7 +32,7 @@ expanded %>% group_by(rowType) %>% summarise(count = length(rowType)) %>% print
 "SELECTING RELEVANT COLUMNS FOR EXPORT" %>% print
 # Simply selects only needed columns in the output.
 expanded <- expanded %>%
-  select(pad_bbl = bbl, houseNum, pad_bin = bin, pad_orig_stname = stname, pad_low = lhnd, pad_high = hhnd, pad_geomtype, stname = alt_st_name, zipcode, lng, lat) %>%
+  select(pad_bbl = bbl, houseNum, pad_bin = bin, pad_orig_stname = stname, pad_condo_low = lolot, pad_condo_high = hilot, pad_condo_flag = condoflag, pad_condo_num = condonum, pad_coop_num = coopnum, pad_vacant = vacant, pad_low = lhnd, pad_high = hhnd, pad_geomtype, stname = alt_st_name, zipcode, lng, lat) %>%
   filter(!is.na(lat) & !is.na(lng)) 
 # Checks:
 # 1. theoretical unnest count matches actual row count
