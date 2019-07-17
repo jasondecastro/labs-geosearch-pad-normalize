@@ -89,7 +89,8 @@ pad <- pad %>%
 pad <- pad %>% 
   mutate(stname = str_trim(gsub("\\s+", " ", stname)))
 
-pad <- pad %>% 
+pad <- bblRaw %>% 
+  mutate(lolot = select(bbl, c("lolot")))
   mutate(lolot = lolot)
   mutate(hilot = lolot)
   mutate(condoflag = condoflag)
